@@ -1,0 +1,46 @@
+---
+sidebar_position: 2
+---
+
+import {
+	Highlight,
+	GET,
+	POST,
+	PATCH,
+} from "../components/docs/MethodHighlight.tsx";
+
+API documentation for user.
+
+## 1. Get Logined User
+
+Used to get currently logined user with authorization header.
+
+#### Endpoint - `/user/me`
+
+#### Method - <Highlight color={GET}>GET</Highlight>
+
+#### Request Header (`Authorization`)
+
+```bash
+Bearer your_access_token
+```
+
+## 2. Update User
+
+Used to update user.
+
+#### Endpoint - `/user/:userId`
+
+#### Method - <Highlight color={PATCH}>PATCH</Highlight>
+
+#### Request Header (`Authorization`)
+
+```bash
+Bearer your_access_token
+```
+
+#### Request Body
+
+| Property |  Status  |
+| :------- | :------: |
+| name     | Optional |

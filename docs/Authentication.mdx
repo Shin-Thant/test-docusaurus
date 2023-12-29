@@ -1,0 +1,83 @@
+---
+sidebar_position: 1
+---
+
+import { Highlight, GET, POST } from "../components/docs/MethodHighlight.tsx";
+
+API documentation to handle user authentication.
+
+## 1. Login User
+
+Used to login user.
+
+#### Endpoint - `/auth/login`
+
+#### Method - <Highlight color={POST}>POST</Highlight>
+
+#### Request Body
+
+| Property |  Status  |
+| :------- | :------: |
+| email    | Required |
+| password | Required |
+
+#### Response
+
+```ts
+{
+	id: string;
+	name: string;
+	email: string;
+	updatedAt: string;
+}
+```
+
+## 2. Register User
+
+Used to register new user.
+
+#### Endpoint - `/auth/register`
+
+#### Method - <Highlight color={POST}>POST</Highlight>
+
+#### Request Body
+
+| Property |  Status  |
+| :------- | :------: |
+| name     | Required |
+| email    | Required |
+| password | Required |
+
+#### Response
+
+```ts
+{
+	id: string;
+	name: string;
+	email: string;
+	createdAt: string;
+	updatedAt: string;
+}
+```
+
+## 3. Logout User
+
+Used to logout user.
+
+#### Endpoint - `/auth/logout`
+
+#### Method - <Highlight color={POST}>POST</Highlight>
+
+#### Request Header (`Authorization`)
+
+```bash
+Bearer your_access_token
+```
+
+#### Response
+
+```ts
+{
+	message: string;
+}
+```
